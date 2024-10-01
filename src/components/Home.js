@@ -7,7 +7,10 @@ const Home = () => {
         {/* Optional floating shapes */}
         <div className="shape"></div>
         <div className="shape"></div>
-        
+        <div className="background-animation">
+        <div className="floating-orbs"></div> {/* Floating orbs */}
+        <div className="spiral-circle"></div> {/* Spiral circle animation */}
+      </div>
         {/* Main content */}
         <div className="home-content">
           <h1>Issac Kondreddy</h1>
