@@ -1,0 +1,136 @@
+/* Home Section Styling */
+.home {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background: radial-gradient(circle, #141e30, #243b55); /* Dark, cinematic gradient */
+    background-size: cover;
+    overflow: hidden;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    z-index: 1; /* Ensure content stays on top */
+  }
+  
+  /* Main Content */
+  .home-content {
+    opacity: 1; /* Ensure content is visible */
+    z-index: 2; /* Ensure it's above background */
+    padding: 20px; /* Added padding for spacing */
+  }
+  
+  /* Headline Font Styling (Cursive) */
+  .home h1 {
+    font-size: 5rem;
+    font-family: 'Dancing Script', cursive; /* Elegant cursive font */
+    color: #ffffff; /* White for contrast */
+    margin: 0;
+    letter-spacing: 0.05em; /* Slight letter spacing for readability */
+    opacity: 1;
+    animation: textFadeIn 2s ease-in-out;
+    margin-bottom: 20px; /* More spacing below the heading */
+  }
+  
+  /* Subtitle Styling */
+  .home p {
+    font-size: 1.5rem;
+    color: #f0f0f0;
+    margin-top: 10px;
+    opacity: 1;
+    animation: textFadeIn 2.5s ease-in-out;
+    letter-spacing: 0.05em; /* Light letter-spacing for better readability */
+  }
+  
+  /* Button with Down Arrow */
+  .cta-btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 24px;
+    background-color: #c66f27eb; /* Vibrant green */
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: background-color 0.4s ease, color 0.4s ease, transform 0.4s ease;
+    position: relative;
+  }
+  
+  /* Down Arrow Icon */
+  .cta-btn::after {
+    content: '\25BC'; /* Unicode for down arrow */
+    font-size: 1.3rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 150%;
+    transition: transform 0.3s ease; /* Arrow moves up on hover */
+  }
+  
+  /* Button Hover Effect */
+  .cta-btn:hover {
+    background-color: #884f21; /* Darker green on hover */
+    transform: scale(1.05); /* Slight button enlargement */
+  }
+  
+  .cta-btn:hover::after {
+    transform: translateX(-50%) translateY(-10px); /* Arrow moves up on hover */
+  }
+  
+  /* Background Gradient Animation */
+  @keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  /* Text Fade-in Animation */
+  @keyframes textFadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px); /* Start slightly below */
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0); /* Move to normal position */
+    }
+  }
+  
+  /* Floating Shapes */
+  .shape {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.1); /* Soft transparent shapes */
+    border-radius: 50%;
+    z-index: 0;
+    animation: float 12s infinite ease-in-out;
+  }
+  
+  .shape:nth-child(1) {
+    width: 100px;
+    height: 100px;
+    top: -30px;
+    left: 20px;
+  }
+  
+  .shape:nth-child(2) {
+    width: 150px;
+    height: 150px;
+    bottom: -80px;
+    right: 40px;
+  }
+  
+  /* Floating Animation */
+  @keyframes float {
+    0% {
+      transform: translateY(0) rotate(0);
+    }
+    50% {
+      transform: translateY(-20px) rotate(45deg);
+    }
+    100% {
+      transform: translateY(0) rotate(0);
+    }
+  }
+  
