@@ -4,7 +4,7 @@ import { FaPython, FaDocker, FaGitAlt, FaLock, FaCogs } from 'react-icons/fa'; /
 import { SiC, SiDjango, SiPostgresql, SiMysql, SiTensorflow,SiQiskit, SiKeras, SiPandas, SiR,SiJenkins, SiPostman, SiNumpy, SiGithubactions,} from 'react-icons/si';
 import { BiCodeBlock } from 'react-icons/bi'; // Icon for APIs
 
-const SkillsHover = () => {
+const Skills = () => {
   const skillCategories = [
     {
       category: 'Programming Languages',
@@ -48,7 +48,7 @@ const SkillsHover = () => {
       ],
     },
     {
-      category: 'CI/CD & Tools',
+      category: 'CI/CD Tools',
       skills: [
         { name: 'Docker', icon: <FaDocker /> },
         { name: 'Jenkins', icon: <SiJenkins /> },
@@ -96,4 +96,4 @@ const SkillsHover = () => {
   );
 };
 
-export default SkillsHover;
+export default Skills;
