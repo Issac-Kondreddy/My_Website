@@ -1,0 +1,150 @@
+/* Projects Section */
+.projects-section {
+    padding: 40px 0; /* Reduced padding to minimize the gap */
+    background: radial-gradient(circle, #141e30, #243b55);
+    color: white;
+    text-align: center;
+    font-family: 'Times New Roman', sans-serif;
+  }
+  .project-features {
+    margin: 10px 0 15px 0;
+    text-align: left;
+    list-style-type: disc;
+    padding-left: 20px;
+    color: #cccccc;
+  }
+  
+  .project-features li {
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+  
+  /* Heading */
+  .projects-heading {
+    font-size: 2.5rem; /* Adjusted size */
+    color: #e0e0e0;
+    margin-bottom: 20px; /* Reduced gap between the main heading and category */
+    text-transform: capitalize;
+    letter-spacing: 0.1em;
+    font-weight: 800;
+  }
+  
+  /* Category Name */
+  .category-name {
+    font-size: 1.8rem;
+    color: #FFD700;
+    margin-bottom: 30px; /* Reduced margin */
+    text-transform: capitalize;
+    letter-spacing: 0.1em;
+    font-weight: 600;
+    border-bottom: 2px solid #FFD700;
+    display: inline-block;
+    padding-bottom: 10px; /* Slight padding */
+  }
+  
+  /* Project Cards Container */
+  .projects-container {
+    display: flex;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjusted min-width for better card width */
+    gap: 20px; /* Reduced gap between cards */
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  
+  /* Individual Project Card */
+  .project-card {
+    background-color: rgba(255, 255, 255, 0.08); /* Semi-transparent */
+    border-radius: 12px;
+    padding: 10px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Light shadow */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%; /* Set width to 100% */
+    height: auto; /* Set height to auto for flexibility */
+  }
+  /* Hover Effect */
+.project-card:hover {
+    transform: translateY(-10px); /* Lifts the card slightly */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.8); /* Deeper shadow on hover */
+  }
+  /* Image */
+  .project-image {
+    width: 100%;
+    height: 200px; /* Fixed height for images to avoid large size variations */
+    object-fit: cover; /* Ensure image fits within the area */
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Add slight shadow */
+  }
+  
+  /* Project Title */
+  .project-title {
+    font-size: 1.5rem;
+    color: #FFD700; /* Golden title */
+    margin-bottom: 10px;
+    text-align: left;
+    font-weight: 600;
+  }
+  
+  /* Project Description */
+  .project-description {
+    font-size: 1rem;
+    color: #cccccc;
+    margin-bottom: 10px;
+    text-align: left;
+  }
+  
+  /* Tech Stack */
+  .tech-stack {
+    margin-bottom: 10px;
+    text-align: left;
+  }
+  
+  .tech {
+    display: inline-block;
+    background-color: #333;
+    padding: 5px 10px;
+    border-radius: 15px; /* Slightly rounded */
+    margin-right: 8px;
+    margin-bottom: 5px;
+    font-size: 0.85rem;
+    color: #ffffff;
+  }
+  
+  /* Links for GitHub and Live Demo */
+  .project-link {
+    display: inline-block;
+    background-color: #333;
+    color: white;
+    padding: 8px 18px;
+    margin-right: 8px;
+    margin-top: 10px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+  }
+  
+  .project-link:hover {
+    background-color: #FFD700; /* Gold on hover */
+  }
+  
+  .live-demo-btn {
+    background-color: #1e90ff;
+  }
+  
+  .live-demo-btn:hover {
+    background-color: #00bfff;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .projects-container {
+      grid-template-columns: 1fr; /* Single column on smaller screens */
+    }
+  }
+  

@@ -5,6 +5,8 @@ import Home from './components/Home'; // Import the Home component
 import About from './components/About';
 import Skills from './components/skills';
 import Experience from './components/Experience';
+import Projects from './components/Projects';
+import Footer from './components/Footer';
 import './App.css'; // You can modify this for global styles
 
 function App() {
@@ -15,6 +17,8 @@ function App() {
       <About /> {/* About component */}
       <Skills />
       <Experience />
+      <Projects />
+      <Footer />
     </div>
   );
 }
