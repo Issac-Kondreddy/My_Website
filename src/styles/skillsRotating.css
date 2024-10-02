@@ -1,0 +1,221 @@
+/* General Styling for the Skills Section */
+.skills-hover-section {
+  padding: 80px 0;
+  background: radial-gradient(circle, #141e30, #243b55); /* Same gradient as Home section */
+  background-size: cover;
+  position: relative; /* Ensure floating shapes appear correctly */
+  color: white;
+  text-align: center;
+  font-family: 'Times New Roman', sans-serif;  /* Modern and stylish font */
+  overflow: hidden; /* Hide floating shapes that go out of bounds */
+  z-index: 1;
+}
+
+/* Floating Shapes Animation */
+.shape {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.1); /* Soft transparent shapes */
+  border-radius: 50%;
+  z-index: 0;
+  animation: float 12s infinite ease-in-out;
+}
+
+.shape:nth-child(1) {
+  width: 120px;
+  height: 120px;
+  top: -40px;
+  left: 30px;
+}
+
+.shape:nth-child(2) {
+  width: 170px;
+  height: 170px;
+  bottom: -90px;
+  right: 50px;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) rotate(0);
+  }
+  50% {
+    transform: translateY(-20px) rotate(45deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0);
+  }
+}
+
+/* Skills Heading */
+.skills-heading {
+  font-size: 2.5rem;
+  color: #e0e0e0;
+  margin-bottom: 50px;
+  text-transform:capitalize;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+}
+
+/* Container for Skill Cards */
+.skills-hover-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Flexible grid */
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Individual Skill Card */
+.skill-card {
+  background-color: rgba(255, 255, 255, 0.01);  /* Semi-transparent for a futuristic look */
+  padding: 20px;
+  border-radius: 12px; /* Smooth rounded corners */
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.skill-card:hover {
+  transform: translateY(-10px);  /* Slight lift on hover */
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.8);  /* Deeper shadow on hover */
+}
+
+.category-name {
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+  color: #ffffff;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: capitalize;
+}
+
+/* Grid for Circles */
+.circle-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));  /* Two or three per row */
+  gap: 25px;
+  justify-items: center;
+}
+
+/* Circle and Icon */
+.rotating-circle-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rotating-circle {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 6px solid;  /* Defined later in hover animation */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transition: all 0.4s ease;
+}
+
+.rotating-circle:hover {
+  border-color: #8A2BE2;  /* Animated border color */
+}
+
+.rotating-circle::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.2), transparent 70%);
+}
+
+.skill-icon {
+  font-size: 1.8rem;
+  color: #ffffff;
+  z-index: 2;  /* Ensure icon is above the gradient */
+  animation: rotateIcon 8s linear infinite;
+}
+
+@keyframes rotateIcon {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Static Skill Name Below the Circle */
+.skill-name {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: 3;  /* Color contrast with circle */
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+/* Hover Effects */
+.rotating-circle-container:hover .skill-icon {
+  color: #FFD700; /* Bright gold on hover */
+}
+
+.skill-name:hover {
+  color: #FFD700; /* Bright gold on hover */
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .skills-hover-container {
+    grid-template-columns: 1fr; /* Single column for small screens */
+  }
+
+  .circle-container {
+    justify-items: center; /* Center the icons on smaller screens */
+  }
+}
+/* Floating Orbs */
+.floating-orbs {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  top: 30%;
+  left: 10%;
+  animation: floatOrb 10s infinite ease-in-out;
+}
+
+@keyframes floatOrb {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-30px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* Spiral Circle Animation */
+.spiral-circle {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  top: 40%;
+  right: 20%;
+  animation: spiralMove 12s infinite linear;
+}
+
+@keyframes spiralMove {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
