@@ -1,0 +1,35 @@
+/* Footer Styling */
+.footer-section {
+    background-color: #141e30; /* Matching dark gradient background */
+    padding: 20px 0;
+    text-align: center;
+    color: #e0e0e0;
+    font-family: 'Times New Roman', sans-serif;
+    border-top: 2px solid #0d0d0d; /* Gold border to match the theme */
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9rem;
+  }
+  
+  .footer-container p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #e0e0e0; /* Soft light grey text */
+    letter-spacing: 0.05em;
+  }
+  
+  .footer-container span {
+    font-weight: 600;
+    color: #FFD700; /* Gold color for emphasis */
+  }
+  
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+    }
+  }
+  

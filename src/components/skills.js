@@ -67,7 +67,7 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills-hover" className="skills-hover-section">
+    <section id="skills" className="skills-hover-section">
       {/* Floating shapes for background animation */}
       <div className="shape shape-1"></div>
       <div className="shape shape-2"></div>
