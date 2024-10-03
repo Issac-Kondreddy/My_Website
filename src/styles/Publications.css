@@ -1,0 +1,150 @@
+/* General Styling for the Publications Section */
+.publications-section {
+    padding: 80px 0;
+    background: radial-gradient(circle, #141e30, #243b55); /* Same gradient as other sections */
+    color: white;
+    text-align: center;
+    font-family: 'Times New Roman', sans-serif;
+    position: relative;  /* Necessary for floating shapes */
+    overflow: hidden;
+  }
+  
+  /* Heading Style with Animation */
+  .publications-heading {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    text-transform: capitalize;
+    color: #e0e0e0;
+    animation: fadeInDown 1s ease-out;
+  }
+  
+  /* Container for Publication Items */
+  .publications-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: left;
+  }
+  
+  /* Individual Publication Item */
+  .publication-item {
+    background-color: rgba(255, 255, 255, 0.08);
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease-out forwards;
+  }
+  
+  .publication-item:nth-child(odd) {
+    animation-delay: 0.3s;
+  }
+  
+  .publication-item:nth-child(even) {
+    animation-delay: 0.5s;
+  }
+  
+  .publication-title {
+    font-size: 1.4rem;
+    color: #FFD700;
+  }
+  
+  .publication-authors,
+  .publication-venue {
+    font-size: 1rem;
+    color: #bbbbbb;
+  }
+  
+  /* Publication Link */
+  .publication-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #c66f27eb;
+    color: white;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: background-color 0.4s ease, transform 0.4s ease;
+  }
+  
+  .publication-link:hover {
+    background-color: #884f21;
+    transform: scale(1.05);
+  }
+  
+  /* Responsive Layout */
+  @media (max-width: 768px) {
+    .publications-container {
+      max-width: 90%;
+    }
+  }
+  
+  /* Floating Orbs Animation */
+  .floating-orbs {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    top: 30%;
+    left: 10%;
+    animation: floatOrb 10s infinite ease-in-out;
+  }
+  
+  @keyframes floatOrb {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-30px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+  
+  /* Spiral Circle Animation */
+  .spiral-circle {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    top: 40%;
+    right: 20%;
+    animation: spiralMove 12s infinite linear;
+  }
+  
+  @keyframes spiralMove {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* Fade-in Animations for Content */
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeInDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
